@@ -302,7 +302,7 @@ endif  # WANT_LIBNH
 
 # Default install path (assumes running at root)
 PREFIX=/usr
-HACKDIR=$(PREFIX)/games/lib/370-hdf_$(GAME)dir
+HACKDIR=$(PREFIX)/games/lib/nethackathondir
 
 SHELLDIR = $(PREFIX)/games
 INSTDIR=$(HACKDIR)

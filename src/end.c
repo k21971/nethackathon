@@ -775,6 +775,8 @@ dump_everything(
 
     init_symbols(); /* revert to default symbol set */
 
+    /* let folks know this was a nethackathon game */
+    Sprintf(pbuf, "NetHackathon, Fall 2023");
     /* one line version ID, which includes build date+time;
        it's conceivable that the game started with a different
        build date+time or even with an older nethack version,
