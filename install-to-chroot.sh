@@ -9,7 +9,7 @@
 # autonamed chroot directory. Can rename.
 DATESTAMP=`date +%Y%m%d-%H%M%S`
 NAO_CHROOT="/opt/nethack/chroot"
-NETHACK_GIT="/home/build/NetHack37"
+NETHACK_GIT="/home/build/nethackathon"
 # the user & group from dgamelaunch config file.
 USRGRP="games:games"
 # COMPRESS from include/config.h; the compression binary to copy. leave blank to skip.
