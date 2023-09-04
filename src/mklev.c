@@ -1,4 +1,4 @@
-/* NetHack 3.7	mklev.c	$NHDT-Date: 1689629245 2023/07/17 21:27:25 $  $NHDT-Branch: NetHack-3.7 $:$NHDT-Revision: 1.154 $ */
+/* NetHack 3.7	mklev.c	$NHDT-Date: 1691877661 2023/08/12 22:01:01 $  $NHDT-Branch: NetHack-3.7 $:$NHDT-Revision: 1.155 $ */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /*-Copyright (c) Alex Smith, 2017. */
 /* NetHack may be freely redistributed.  See license for details. */
@@ -739,7 +739,7 @@ count_level_features(void)
 
     gl.level.flags.nfountains = gl.level.flags.nsinks = 0;
     for (y = 0; y < ROWNO; y++)
-        for (x = 0; x < COLNO; x++) {
+        for (x = 1; x < COLNO; x++) {
             int typ = levl[x][y].typ;
 
             if (typ == FOUNTAIN)
@@ -822,6 +822,7 @@ clear_level_structures(void)
     stairway_free_all();
     gm.made_branch = FALSE;
     clear_regions();
+    free_exclusions();
     reset_xystart_size();
     if (gl.lev_message) {
         free(gl.lev_message);
